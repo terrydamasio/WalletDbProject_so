@@ -1,0 +1,33 @@
+services:
+
+  mysql:
+    image: terrydamasio/wallet-mysql:1.1
+    container_name: wallet_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wallet_homolog
+      MYSQL_USER: wallet_user
+      MYSQL_PASSWORD: wallet123
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  app:
+    image: terrydamasio/wallet-api:1.0
+    container_name: wallet_api
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USER: wallet_user
+      DB_PASSWORD: wallet123
+      DB_NAME: wallet_homolog
+    ports:
+      - "8000:8000"
+
+volumes:
+  mysql_data: {}

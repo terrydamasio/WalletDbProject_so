@@ -14,11 +14,11 @@ load_dotenv(ENV_PATH)
 
 
 def get_database_url() -> str:
-    user = os.getenv("DB_USER")
-    password = os.getenv("DB_PASSWORD")
-    host = os.getenv("DB_HOST", "localhost")
-    port = os.getenv("DB_PORT", "3306")
-    db = os.getenv("DB_NAME")
+    host = os.getenv("DB_HOST", "mysql")
+    user = os.getenv("DB_USER", "wallet_user")
+    password = os.getenv("DB_PASSWORD", "wallet123")
+    db = os.getenv("DB_NAME", "wallet_homolog")
+    port = int(os.getenv("DB_PORT", 3306))
 
     if not all([user, password, db]):
         raise RuntimeError("Variáveis de ambiente do banco não configuradas corretamente.")

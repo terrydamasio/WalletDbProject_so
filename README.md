@@ -75,6 +75,9 @@ Isso irá criar todas o banco de dados e todas as tabelas e colunas necessárias
 ```bash
 uvicorn api.main:app --reload
 ```
+```bash
+docker compose up -d
+```
 
 Acesse:
 
