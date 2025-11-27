@@ -78,6 +78,9 @@ uvicorn api.main:app --reload
 ```bash
 docker compose up -d
 ```
+```bash
+ docker compose down 
+```
 
 Acesse:
 
