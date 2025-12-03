@@ -3,7 +3,7 @@ from pathlib import Path
 from contextlib import contextmanager
 
 from dotenv import load_dotenv
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine, Connection
 
 
