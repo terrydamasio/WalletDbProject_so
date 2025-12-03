@@ -37,7 +37,7 @@ engine: Engine = create_engine(
 
 
 @contextmanager
-def get_connection() -> Connection:
+def get_connection() -> Connection: # type: ignore
     """
     Entrega uma conexão do SQLAlchemy já com transação aberta.
     Faz commit automático se der tudo certo, rollback se der erro.

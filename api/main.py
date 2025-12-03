@@ -49,7 +49,7 @@ def create_app() -> FastAPI:
         )
 
     # ========================================
-    # REGISTRAR ROUTERS (será feito nas próximas sprints)
+    # REGISTRAR ROUTERS
     # ========================================
     
     app.include_router(carteiras_router)
@@ -70,7 +70,7 @@ app = create_app()
 
 
 # ========================================
-# EXECUÇÃO DIRETA (opcional)
+# EXECUÇÃO DIRETA
 # ========================================
 
 if __name__ == "__main__":

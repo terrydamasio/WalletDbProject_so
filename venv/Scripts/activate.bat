@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\terry\Downloads\Projeto-carteira-moedas\WalletDbProject\venv
+set VIRTUAL_ENV=C:\Users\terry\Downloads\WalletDbProject_db-main\WalletDbProject_so\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
